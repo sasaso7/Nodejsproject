@@ -7,6 +7,8 @@ import { DocumentStackScreen } from "./Screens/DocumentStack";
 import { HomeScreen } from "./Screens/HomeScreen";
 import { ImageEntry } from "./Screens/ImagesScreen";
 import { ImageStackScreen } from "./Screens/ImageStack";
+import { AudioEntry } from "./Screens/AudioScreen";
+import { AudioStackScreen } from "./Screens/AudioStack";
 import { DocEntry } from "./Screens/DocumentsScreen";
 
 function iconResolver(route: string) {
@@ -17,6 +19,8 @@ function iconResolver(route: string) {
     case "Images":
       return "ios-images";
     case "Documents":
+      return "ios-document";
+      case "Audio":
       return "ios-document";
     default:
       return "ios-document";
@@ -31,6 +35,9 @@ export type ScreenParamList = {
   // Documents stack screens
   Documents: undefined;
   DocumentDetails: { item: DocEntry };
+  //Audio stack screens
+  Audio: undefined;
+  AudioDetails: { item: AudioEntry };
 };
 
 // Tab Bar
@@ -54,6 +61,7 @@ export default function App() {
         <Tab.Screen name="Home" component={HomeScreen} />
         <Tab.Screen name="Images" component={ImageStackScreen} />
         <Tab.Screen name="Documents" component={DocumentStackScreen} />
+        <Tab.Screen name="Audio" component={AudioStackScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
