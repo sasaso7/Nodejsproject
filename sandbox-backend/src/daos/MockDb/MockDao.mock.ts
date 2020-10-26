@@ -1,10 +1,13 @@
 import jsonfile from "jsonfile";
 import { Image } from "@daos/ImageDao";
 import { Document } from "@daos/DocumentDao";
+import { Audio } from "@daos/AudioDao";
+
 
 interface MockDb {
   images: Image[];
   documents: Document[];
+  audio: Audio[];
 }
 
 export class MockDaoMock {

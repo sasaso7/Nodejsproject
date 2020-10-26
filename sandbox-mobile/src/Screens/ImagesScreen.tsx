@@ -4,6 +4,7 @@ import { baseUrl, Blue } from '../Constants';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { useNavigation } from '@react-navigation/native';
+import Sound from 'react-native-sound';
 
 export interface ImageEntry {
     id: number;
@@ -18,6 +19,7 @@ const Item = ({ item, onPress }: { item: ImageEntry, onPress: () => void }) => (
         <Image source={{ uri: `${baseUrl}/${item.source}` }} style={styles.img} />
     </TouchableOpacity>
 );
+
 
 async function fetchImages() {
     const res = await fetch(`${baseUrl}/api/images/`)

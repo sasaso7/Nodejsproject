@@ -10,11 +10,16 @@ export function AudioDetails() {
     const { item } = route.params;
 
     return (
-        <SafeAreaView style={styles.screen}>
+              <SafeAreaView style={styles.screen}>
             <Text style={styles.title}>{item.title}</Text>
 
             <Text style={styles.desc}>{item.description}</Text>
 
+            <Image
+                style={styles.image}
+                resizeMode='contain'
+                source={{uri: `${baseUrl}/${item.source}`}}
+                />
         </SafeAreaView>
     );
 }

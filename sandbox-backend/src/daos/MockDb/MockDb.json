@@ -86,5 +86,25 @@
       "description": "The below document lists the features provided by our Hospitality Management System.",
       "source": "documents/invoice6.docx"
     }
+  ],
+  "audio": [
+    {
+      "id": 1,
+      "title": "Bird Sounds",
+      "description": "The below document lists the features provided by our Bank Management System.",
+      "source": "audio/audio1.mp3"
+    },
+    {
+      "id": 2,
+      "title": "Whale Sounds",
+      "description": "The below document lists the features provided by our Hospital Management System.",
+      "source": "audio/audio2.mp3"
+    },
+    {
+      "id": 3,
+      "title": "Insurance Management System.",
+      "description": "The below document lists the features provided by our Insurance Management System.",
+      "source": "audio/audio3.mp3"
+    }
   ]
 }
