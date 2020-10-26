@@ -26,7 +26,7 @@ const Item = ({ item}: { item: AudioEntry}) => (
         customAdditionalControls={[]}
         //Removes arrows
         showJumpControls={false}
-         onPlay={e => console.log("onPlay")} style={{width:"700px", marginTop:10, backgroundColor: "#B99480", borderRadius:3,}}
+         onPlay={e => console.log("onPlay")} style={{width:"700px", marginTop:10, backgroundColor: "#c9b3a5", borderRadius:3,}}
         />
     </View>
     
@@ -77,7 +77,7 @@ export function AudioScreen() {
             {error && (
                 <Text>Error: {error}</Text>
             )}
-            <FlatList
+            <FlatList style={styles.styletoScreen} 
                 data={Audio}
                 renderItem={({ item }) => <Item item={item}/>}
                 keyExtractor={item => item.id.toString()}
@@ -105,12 +105,15 @@ const styles = StyleSheet.create({
         paddingTop: 10,
         paddingBottom: 20,
         marginVertical: 8,
-        marginLeft: 30,
-        marginRight:30
+        marginLeft: 100,
+        marginRight:100
 
     },
     itemTitle: {
-        fontSize: 20
+        margin: 10,
+        fontSize: 20,
+        fontFamily:"Arial, Helvetica, sans-serif"
+        
     },
     img: {
         width: 220,
@@ -119,4 +122,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 2,
     },
+    styletoScreen: {
+        
+    }
 });
